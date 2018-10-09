@@ -1,4 +1,17 @@
-body { margin: 60px auto; width: 100%; }
+body { margin: 60px auto; width: 90%; }
+
+.column {
+    float: left;
+    width:  47%;
+    padding: 0px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
