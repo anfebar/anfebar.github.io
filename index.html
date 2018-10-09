@@ -3,12 +3,43 @@ layout: default
 title: Andres F. Barrientos
 ---
 
-		<div class="blurb">
-			<h1>Andrés Felipe Barrientos</h1>
+		<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>How to create side-by-side images with the CSS float property:</p>
+
+<div class="row">
+  <div class="column">
+<h1>Andrés Felipe Barrientos</h1>
 			Postdoctoral Associate <br>
 			Department of Statistical Science<br>
 			Duke University<br>
-			
+  </div>
+  <div class="column">
+    <img src="Barrientos.jpg" alt="Felipe" style="width:50%">
+  </div>
+</div>
+
+	<div class="blurb">			
 			<h4>Research Interests</h4>
 			<p>Bayesian nonparametrics and data privacy. My research focuses on proposing, 
 				studying, and applying Bayesian nonparametric models for single and regression 
