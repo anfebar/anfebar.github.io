@@ -1,9 +1,16 @@
-body { margin: 60px auto; width: 90%; }
+body { margin: 60px auto; width: 70%; }
+
 
 .column {
     float: left;
-    width:  47%;
+    width:  60%;
     padding: 0px;
+}
+
+.column1 {
+    float: left;
+    width:  30%;
+    padding: 20px;
 }
 
 /* Clearfix (clear floats) */
