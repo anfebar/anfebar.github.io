@@ -2,7 +2,7 @@
 
 # Read dataset
 # nba.data = read.table("DatReplicationCollapsedIDbyTrade.txt",header = T)
-nba.data = read.table(url("https://raw.githubusercontent.com/anfebar/anfebar.github.io/master/Software/BOARS/DatReplicationCollapsedIDbyTrade.txt"),header = T)
+nba.data = read.table(url("https://anfebar.github.io/Software/BOARS/DatReplicationCollapsedIDbyTrade.txt"),header = T)
 
 # Get game date and home and away team
 Home = nba.data$Team1
@@ -45,7 +45,7 @@ DiffScore = nba.data$TotPoints1 - nba.data$TotPoints2
 library(rstan)
 rstan_options(auto_write = TRUE)
 #Modelcpp <- stanc(file = "Model3.stan")
-S <- "https://raw.githubusercontent.com/anfebar/anfebar.github.io/master/Software/BOARS/Model3.stan"
+S <- "https://anfebar.github.io/Software/BOARS/Model3.stan"
 destfile <- tempfile()
 download.file(S, destfile = destfile)
 Modelcpp <- stanc(file = destfile)
@@ -59,13 +59,13 @@ abilities_dat <- list(N = nrow(M),
                       X = M)
 
 fit = sampling(Model, data = abilities_dat, 
-               iter = 100, warmup = 20, thin = 1, cores=1,
+               iter = 18000, warmup = 2000, thin = 8, cores=1,
                chains = 1, refresh = 10, algorithm="NUTS"	)
 
 
 # The next section of code produces Tables 1, 2, and 3 of the document
 # Install BOARS
-install.packages("https://github.com/anfebar/anfebar.github.io/blob/master/Software/BOARS/BOARS_0.1.0.tar.gz?raw=true",
+install.packages("https://anfebar.github.io/Software/BOARS/BOARS_0.1.0.tar.gz?raw=true",
                  repos = NULL, type = "source")
 
 library(BOARS)
@@ -284,3 +284,4 @@ ss1 <- play.ord$smaller > play.ord$greater
 
 xtable(cbind(play.ord[ss1,][order(play.ord[ss1,2], decreasing=TRUE),], 
              play.ord[!ss1,][order(play.ord[!ss1,3], decreasing=FALSE),]))
+
