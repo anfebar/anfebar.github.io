@@ -14,7 +14,8 @@ source(url("https://raw.githubusercontent.com/anfebar/anfebar.github.io/master/S
 
 ##########################################
 ##########################################
-# EXAMPLE WITH A MODEL CORRECTLY SPECIFIED
+# EXAMPLE WITH BETA REGRESSION
+# CORRECTLY SPECIFIED MODEL 
 ##########################################
 ##########################################
 
@@ -107,7 +108,8 @@ BF # BF should be larger as n increases
 
 ##########################################
 ##########################################
-# EXAMPLE WITH A MODEL CORRECTLY SPECIFIED
+# EXAMPLE WITH BETA REGRESSION
+# MISSPECIFIED MODEL
 ##########################################
 ##########################################
 
