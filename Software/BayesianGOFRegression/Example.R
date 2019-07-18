@@ -1,17 +1,16 @@
 #####################
 ### Required libraries
 #####################
-library(invgamma)
-library(MASS)
-library(Matrix)
-library(mvtnorm)
-library(splines)
+require(invgamma)
+require(MASS)
+require(Matrix)
+require(mvtnorm)
+require(splines)
 
 #####################
 ### Read source
 #####################
-source("MCMCAlgorithm.R")
-
+source(url("https://raw.githubusercontent.com/anfebar/anfebar.github.io/master/Software/BayesianGOFRegression/MCMCAlgorithm.R"))
 
 ##########################################
 ##########################################
