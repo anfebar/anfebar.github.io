@@ -37,7 +37,7 @@ f.MCMC = function(Data,MCMC)
     V=c(rbeta(H-1,1,10),1)
     V*c(1,exp(cumsum(log(1-V[1:(H-1)]))))
   }
-  ng=round(apply(sapply(1:1e4,f)*n,1,mean))
+  ng=round(apply(sapply(1:1e4,f)*n,1,mean))+1
   g = rep(1,H)
   Gamma0 = t(X)%*%X
   
