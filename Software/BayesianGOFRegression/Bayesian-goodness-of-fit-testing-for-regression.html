@@ -186,7 +186,7 @@ summary {
 <p>This document describes the steps users need to follow to implement the proposed Bayesian goodness-of-fit test. To illustrate the approach, we use simulated data.</p>
 <div id="step-1-load-packages-and-run-r-file" class="section level2">
 <h2>Step 1: Load packages and run R file</h2>
-<p>To implement the method, users need to load the packages below and read the R code from a file “MCMCAlgorithm.R”. This file contains the algorithm used to fit our proposal and obtain the corresponding Bayes factor.</p>
+<p>To implement the method, To implement the method, users need to load the packages below and read the R code from the file “MCMCAlgorithm.R”. This file contains the algorithm used to fit our proposal and obtain the corresponding Bayes factor.</p>
 <pre class="r"><code>#####################
 ### Required libraries
 #####################
@@ -264,22 +264,34 @@ Data = data.frame(u=u,X=Xbs)</code></pre>
 <pre class="r"><code>#####################
 ### Set mcmc parameters --  H: DPM truncation level
 #####################
-MCMC = list(nburn = 50, nskip = 10, nsave = 10, H = 50)
+MCMC = list(nburn = 5000, nskip = 10, nsave = 1000, H = 50)
 
 #####################
 ### Compute Bayes factor and posterior probability
 #####################
 BF = f.MCMC(Data,MCMC)</code></pre>
-<pre><code>## [1] &quot;Burning ...&quot;</code></pre>
+<pre><code>## [1] &quot;Burning ...&quot;
+## [1] &quot;Burning 1000 of 5000&quot;
+## [1] &quot;Burning 2000 of 5000&quot;
+## [1] &quot;Burning 3000 of 5000&quot;
+## [1] &quot;Burning 4000 of 5000&quot;
+## [1] &quot;Burning 5000 of 5000&quot;
+## [1] &quot;Saving 100 of 1000&quot;
+## [1] &quot;Saving 200 of 1000&quot;
+## [1] &quot;Saving 300 of 1000&quot;
+## [1] &quot;Saving 400 of 1000&quot;
+## [1] &quot;Saving 500 of 1000&quot;
+## [1] &quot;Saving 600 of 1000&quot;
+## [1] &quot;Saving 700 of 1000&quot;
+## [1] &quot;Saving 800 of 1000&quot;
+## [1] &quot;Saving 900 of 1000&quot;
+## [1] &quot;Saving 1000 of 1000&quot;</code></pre>
 <pre class="r"><code>BF</code></pre>
 <pre><code>## $posterior.prob
-## [1] 1
+## [1] 0.466
 ## 
 ## $BF
-## [1] 999
-## 
-## $message
-## [1] &quot;posterior.prob =1 implies BF &gt; 999&quot;</code></pre>
+## [1] 0.8726592</code></pre>
 </div>
 
 
