@@ -232,8 +232,8 @@ X = X[,-1]</code></pre>
 </div>
 </div>
 <div id="step-2-fit-the-proposed-model" class="section level2">
-<h2>Step 2: fit the proposed model</h2>
-<p>The input in this step is the data set containing the response variable, predictors, and proposed model. In this example, the precision parameter in the proposed beta regression is not indexed by predictors. Notice that the precision parameter in the Beta regression model used to simulate data depends on the predictors, i.e., the proposed model is not correctly specified.</p>
+<h2>Step 2: fit the model defining  <span class="math inline">\(H_0\)</span> </h2>
+<p>The input in this step is the data set containing the response variable (<span class="math inline">\(y\)</span>), predictors (<span class="math inline">\(x\)</span>), and model for  <span class="math inline">\(y|x\)</span>. In this example, the precision parameter in the proposed beta regression is not indexed by predictors. Notice that the precision parameter in the Beta regression model used to simulate data depends on the predictors, i.e., the proposed model is not correctly specified.</p>
 <pre class="r"><code>#######################
 ### Fit beta regression with constant precision parameter 
 #######################
