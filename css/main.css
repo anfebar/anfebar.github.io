@@ -55,4 +55,7 @@ ul.posts li { list-style: none; }
 .cv h2 { font-size: 2em; }
 .cv address, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
 .cv address, .cv p { font-size: 1.2em; }
+.cv ol { font-size: 1.08em; line-height: 1.45; }
+.cv ol li { margin-bottom: .9em; }
+.cv ol li:last-child { margin-bottom: 0; }
 .cv .download { float: right; font-size: .8em; text-transform: uppercase; }
